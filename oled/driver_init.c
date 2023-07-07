@@ -114,6 +114,17 @@ void system_init(void)
 	gpio_set_pin_direction(DC_PIN, GPIO_DIRECTION_OUT);
 
 	gpio_set_pin_function(DC_PIN, GPIO_PIN_FUNCTION_OFF);
-
+	
+	
+	//BOTOES
+	
+	gpio_set_pin_direction(PA22, GPIO_DIRECTION_IN);
+	gpio_set_pin_direction(PA06, GPIO_DIRECTION_IN);
+	gpio_set_pin_direction(PA07, GPIO_DIRECTION_IN);
+	
+	gpio_set_pin_pull_mode(PA22, GPIO_PULL_UP);
+	gpio_set_pin_pull_mode(PA06, GPIO_PULL_UP);
+	gpio_set_pin_pull_mode(PA07, GPIO_PULL_UP);
+	
 	DISPLAY_SPI_init();
 }
