@@ -2,15 +2,15 @@ hal/utils/src/utils_event.d hal/utils/src/utils_event.o: \
  ../hal/utils/src/utils_event.c ../hal/utils/include/utils_event.h \
  ../hal/utils/include/utils.h ../hal/utils/include/utils_list.h \
  ../hal/utils/include/compiler.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/stdint.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/machine/_default_types.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/features.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/_newlib_version.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/_intsup.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/_stdint.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
  ../hal/utils/include/parts.h ../include/samr21.h ../include/samr21g18a.h \
  ../CMSIS/Core/Include/core_cm0plus.h \
  ../CMSIS/Core/Include/cmsis_version.h \
@@ -56,33 +56,33 @@ hal/utils/src/utils_event.d hal/utils/src/utils_event.o: \
  ../hri/hri_tc_r21.h ../hri/hri_tcc_r21.h ../hri/hri_usb_r21.h \
  ../hri/hri_wdt_r21.h ../hal/utils/include/err_codes.h \
  ../hal/utils/include/events.h ../hal/utils/include/utils_assert.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/string.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/_ansi.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/newlib.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/config.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/machine/ieeefp.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/reent.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/_ansi.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/_types.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/machine/_types.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/lock.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/cdefs.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/_locale.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/strings.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/string.h
 ../hal/utils/include/utils_event.h:
 ../hal/utils/include/utils.h:
 ../hal/utils/include/utils_list.h:
 ../hal/utils/include/compiler.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/stdint.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/machine/_default_types.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/features.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/_newlib_version.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/_intsup.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/_stdint.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h:
 ../hal/utils/include/parts.h:
 ../include/samr21.h:
 ../include/samr21g18a.h:
@@ -180,17 +180,17 @@ hal/utils/src/utils_event.d hal/utils/src/utils_event.o: \
 ../hal/utils/include/err_codes.h:
 ../hal/utils/include/events.h:
 ../hal/utils/include/utils_assert.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/newlib.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/config.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/ieeefp.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/reent.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_ansi.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_types.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_types.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/lock.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/cdefs.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_locale.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/strings.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/string.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/string.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/_ansi.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/newlib.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/config.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/machine/ieeefp.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/reent.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/_ansi.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/_types.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/machine/_types.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/lock.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/cdefs.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/_locale.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/strings.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/string.h:

@@ -1,15 +1,15 @@
 hal/utils/src/utils_assert.d hal/utils/src/utils_assert.o: \
  ../hal/utils/src/utils_assert.c ../hal/utils/include/utils_assert.h \
  ../hal/utils/include/compiler.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h \
- /usr/share/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/stdint.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/machine/_default_types.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/features.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/_newlib_version.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/_intsup.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/_stdint.h \
+ /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
  ../hal/utils/include/parts.h ../include/samr21.h ../include/samr21g18a.h \
  ../CMSIS/Core/Include/core_cm0plus.h \
  ../CMSIS/Core/Include/cmsis_version.h \
@@ -56,15 +56,15 @@ hal/utils/src/utils_assert.d hal/utils/src/utils_assert.o: \
  ../hri/hri_wdt_r21.h ../hal/utils/include/err_codes.h
 ../hal/utils/include/utils_assert.h:
 ../hal/utils/include/compiler.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/features.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/_newlib_version.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_intsup.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h:
-/usr/share/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/stdint.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/machine/_default_types.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/features.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/_newlib_version.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/_intsup.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/_stdint.h:
+/opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h:
 ../hal/utils/include/parts.h:
 ../include/samr21.h:
 ../include/samr21g18a.h:
