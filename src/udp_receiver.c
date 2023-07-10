@@ -1,24 +1,55 @@
 #include <openthread/udp.h>
 
+// Defina uma estrutura para armazenar os dados recebidos
+typedef struct
+{
+    float temperature;
+    float luminosity;
+    float orientation;
+} SensorData;
+
+// Defina uma variável global para armazenar os dados recebidos
+SensorData gSensorData;
+
+// Defina uma função de retorno de chamada para lidar com os dados recebidos
 void handleUdpReceive(void *aContext, otMessage *aMessage, const otMessageInfo *aMessageInfo)
 {
-	uint8_t buffer[1500];
-	int length = otMessageRead(aMessage, otMessageGetOffset(aMessage), buffer, sizeof(buffer));
+    uint16_t length = otMessageGetLength(aMessage) - otMessageGetOffset(aMessage);
 
-	// Process the received data here
+    // Verifique se o tamanho dos dados recebidos corresponde ao tamanho da estrutura SensorData
+    if (length == sizeof(SensorData))
+    {
+        // Leia os dados recebidos na variável global gSensorData
+        otMessageRead(aMessage, otMessageGetOffset(aMessage), &gSensorData, sizeof(SensorData));
+    }
 }
 
-void setupUdpReceiver(otInstance *aInstance)
+int main(int argc, char *argv[])
 {
-	otUdpSocket socket;
-	otSockAddr sockaddr;
+    otInstance *instance = ...; // Obtenha uma instância do OpenThread
+    otUdpSocket socket;
+    otSockAddr sockaddr;
 
-	memset(&sockaddr, 0, sizeof(sockaddr));
-	sockaddr.mPort = 1234; // Set the port to listen on
+    // Inicialize o soquete UDP
+    memset(&socket, 0, sizeof(socket));
+    memset(&sockaddr, 0, sizeof(sockaddr));
 
-	otUdpOpen(aInstance, &socket, handleUdpReceive, NULL);
-	otUdpBind(&socket, &sockaddr);
-}
+    // Defina o endereço e a porta do soquete
+    sockaddr.mPort = ...; // Substitua pelo número da porta que você deseja usar
+
+    // Abra o soquete UDP
+    otUdpOpen(instance, &socket, handleUdpReceive, NULL);
+    otUdpBind(&socket, &sockaddr);
+
+    // O loop principal do programa
+    while (true)
+    {
+        // Execute o processamento de eventos do OpenThread
+        otTaskletsProcess(instance);
+        otSysProcessDrivers(instance);
+
+        // Aqui você pode acessar os valores de temperatura, luminosidade e orientação armazenados na variável global gSensorData
+
 
 //esperar feedback da equipe HAL para alteracoes
 
