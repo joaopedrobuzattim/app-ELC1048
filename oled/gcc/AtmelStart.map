@@ -8041,7 +8041,7 @@ LOAD /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-
 LOAD /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtn.o
                 0x0000000000002000                STACK_SIZE = DEFINED (STACK_SIZE)?STACK_SIZE:DEFINED (__stack_size__)?__stack_size__:0x2000
 
-.text           0x0000000000000000     0x1868
+.text           0x0000000000000000     0x1890
                 0x0000000000000000                . = ALIGN (0x4)
                 0x0000000000000000                _sfixed = .
  *(.vectors .vectors.*)
@@ -8213,181 +8213,181 @@ LOAD /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-
  .text.gpio_get_pin_level
                 0x0000000000000b18       0x3c main.o
  .text.startup.main
-                0x0000000000000b54      0x108 main.o
+                0x0000000000000b54      0x11c main.o
                 0x0000000000000b54                main
  .text.ssd1306_read_data
-                0x0000000000000c5c        0x4 gfx_mono/display_controller/ssd1306/ssd1306.o
-                0x0000000000000c5c                ssd1306_read_data
+                0x0000000000000c70        0x4 gfx_mono/display_controller/ssd1306/ssd1306.o
+                0x0000000000000c70                ssd1306_read_data
  .text.ssd1306_write_data
-                0x0000000000000c60       0x58 gfx_mono/display_controller/ssd1306/ssd1306.o
-                0x0000000000000c60                ssd1306_write_data
+                0x0000000000000c74       0x58 gfx_mono/display_controller/ssd1306/ssd1306.o
+                0x0000000000000c74                ssd1306_write_data
  .text.ssd1306_write_command
-                0x0000000000000cb8       0x58 gfx_mono/display_controller/ssd1306/ssd1306.o
-                0x0000000000000cb8                ssd1306_write_command
+                0x0000000000000ccc       0x58 gfx_mono/display_controller/ssd1306/ssd1306.o
+                0x0000000000000ccc                ssd1306_write_command
  .text.ssd1306_set_page_address
-                0x0000000000000d10       0x14 gfx_mono/display_controller/ssd1306/ssd1306.o
-                0x0000000000000d10                ssd1306_set_page_address
+                0x0000000000000d24       0x14 gfx_mono/display_controller/ssd1306/ssd1306.o
+                0x0000000000000d24                ssd1306_set_page_address
  .text.ssd1306_set_column_address
-                0x0000000000000d24       0x20 gfx_mono/display_controller/ssd1306/ssd1306.o
-                0x0000000000000d24                ssd1306_set_column_address
+                0x0000000000000d38       0x20 gfx_mono/display_controller/ssd1306/ssd1306.o
+                0x0000000000000d38                ssd1306_set_column_address
  .text.ssd1306_set_start_line_address
-                0x0000000000000d44       0x14 gfx_mono/display_controller/ssd1306/ssd1306.o
-                0x0000000000000d44                ssd1306_set_start_line_address
+                0x0000000000000d58       0x14 gfx_mono/display_controller/ssd1306/ssd1306.o
+                0x0000000000000d58                ssd1306_set_start_line_address
  .text.ssd1306_hard_reset
-                0x0000000000000d58       0x10 gfx_mono/display_controller/ssd1306/ssd1306.o
-                0x0000000000000d58                ssd1306_hard_reset
+                0x0000000000000d6c       0x10 gfx_mono/display_controller/ssd1306/ssd1306.o
+                0x0000000000000d6c                ssd1306_hard_reset
  .text.ssd1306_disable_sleep
-                0x0000000000000d68       0x10 gfx_mono/display_controller/ssd1306/ssd1306.o
-                0x0000000000000d68                ssd1306_disable_sleep
+                0x0000000000000d7c       0x10 gfx_mono/display_controller/ssd1306/ssd1306.o
+                0x0000000000000d7c                ssd1306_disable_sleep
  .text.ssd1306_set_contrast
-                0x0000000000000d78       0x1c gfx_mono/display_controller/ssd1306/ssd1306.o
-                0x0000000000000d78                ssd1306_set_contrast
+                0x0000000000000d8c       0x1c gfx_mono/display_controller/ssd1306/ssd1306.o
+                0x0000000000000d8c                ssd1306_set_contrast
  .text.ssd1306_construct
-                0x0000000000000d94       0xbc gfx_mono/display_controller/ssd1306/ssd1306.o
-                0x0000000000000d94                ssd1306_construct
+                0x0000000000000da8       0xbc gfx_mono/display_controller/ssd1306/ssd1306.o
+                0x0000000000000da8                ssd1306_construct
  .text.gpio_set_pin_direction
-                0x0000000000000e50       0x50 driver_init.o
+                0x0000000000000e64       0x50 driver_init.o
  .text._gpio_set_pin_function
-                0x0000000000000ea0       0x60 driver_init.o
+                0x0000000000000eb4       0x60 driver_init.o
  .text.DISPLAY_SPI_PORT_init
-                0x0000000000000f00       0x60 driver_init.o
-                0x0000000000000f00                DISPLAY_SPI_PORT_init
+                0x0000000000000f14       0x60 driver_init.o
+                0x0000000000000f14                DISPLAY_SPI_PORT_init
  .text.DISPLAY_SPI_CLOCK_init
-                0x0000000000000f60       0x20 driver_init.o
-                0x0000000000000f60                DISPLAY_SPI_CLOCK_init
+                0x0000000000000f74       0x20 driver_init.o
+                0x0000000000000f74                DISPLAY_SPI_CLOCK_init
  .text.DISPLAY_SPI_init
-                0x0000000000000f80       0x28 driver_init.o
-                0x0000000000000f80                DISPLAY_SPI_init
+                0x0000000000000f94       0x28 driver_init.o
+                0x0000000000000f94                DISPLAY_SPI_init
  .text.system_init
-                0x0000000000000fa8       0xa8 driver_init.o
-                0x0000000000000fa8                system_init
+                0x0000000000000fbc       0xa8 driver_init.o
+                0x0000000000000fbc                system_init
  .text.hri_sercomspi_clear_CTRLA_ENABLE_bit
-                0x0000000000001050       0x12 hpl/sercom/hpl_sercom.o
+                0x0000000000001064       0x12 hpl/sercom/hpl_sercom.o
  .text._spi_sync_enable
-                0x0000000000001062       0x24 hpl/sercom/hpl_sercom.o
- *fill*         0x0000000000001086        0x2 
+                0x0000000000001076       0x24 hpl/sercom/hpl_sercom.o
+ *fill*         0x000000000000109a        0x2 
  .text._spi_m_sync_init
-                0x0000000000001088      0x190 hpl/sercom/hpl_sercom.o
-                0x0000000000001088                _spi_m_sync_init
+                0x000000000000109c      0x190 hpl/sercom/hpl_sercom.o
+                0x000000000000109c                _spi_m_sync_init
  .text._spi_m_sync_enable
-                0x0000000000001218       0x2c hpl/sercom/hpl_sercom.o
-                0x0000000000001218                _spi_m_sync_enable
+                0x000000000000122c       0x2c hpl/sercom/hpl_sercom.o
+                0x000000000000122c                _spi_m_sync_enable
  .text._spi_m_sync_trans
-                0x0000000000001244       0xe0 hpl/sercom/hpl_sercom.o
-                0x0000000000001244                _spi_m_sync_trans
+                0x0000000000001258       0xe0 hpl/sercom/hpl_sercom.o
+                0x0000000000001258                _spi_m_sync_trans
  .text.display_ctrl_mono_construct
-                0x0000000000001324        0x6 gfx_mono/display_controller/display_ctrl_mono.o
-                0x0000000000001324                display_ctrl_mono_construct
- *fill*         0x000000000000132a        0x2 
+                0x0000000000001338        0x6 gfx_mono/display_controller/display_ctrl_mono.o
+                0x0000000000001338                display_ctrl_mono_construct
+ *fill*         0x000000000000133e        0x2 
  .text.display_ctrl_mono_hard_reset
-                0x000000000000132c       0x2c gfx_mono/display_controller/display_ctrl_mono.o
-                0x000000000000132c                display_ctrl_mono_hard_reset
+                0x0000000000001340       0x2c gfx_mono/display_controller/display_ctrl_mono.o
+                0x0000000000001340                display_ctrl_mono_hard_reset
  .text.atmel_start_init
-                0x0000000000001358       0x14 atmel_start.o
-                0x0000000000001358                atmel_start_init
+                0x000000000000136c       0x14 atmel_start.o
+                0x000000000000136c                atmel_start_init
  .text.atomic_enter_critical
-                0x000000000000136c        0xe hal/src/hal_atomic.o
-                0x000000000000136c                atomic_enter_critical
+                0x0000000000001380        0xe hal/src/hal_atomic.o
+                0x0000000000001380                atomic_enter_critical
  .text.atomic_leave_critical
-                0x000000000000137a        0xc hal/src/hal_atomic.o
-                0x000000000000137a                atomic_leave_critical
- *fill*         0x0000000000001386        0x2 
- .text          0x0000000000001388      0x114 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
-                0x0000000000001388                __udivsi3
-                0x0000000000001388                __aeabi_uidiv
-                0x0000000000001494                __aeabi_uidivmod
- .text          0x000000000000149c        0x4 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
-                0x000000000000149c                __aeabi_ldiv0
-                0x000000000000149c                __aeabi_idiv0
+                0x000000000000138e        0xc hal/src/hal_atomic.o
+                0x000000000000138e                atomic_leave_critical
+ *fill*         0x000000000000139a        0x2 
+ .text          0x000000000000139c      0x114 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+                0x000000000000139c                __udivsi3
+                0x000000000000139c                __aeabi_uidiv
+                0x00000000000014a8                __aeabi_uidivmod
+ .text          0x00000000000014b0        0x4 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+                0x00000000000014b0                __aeabi_ldiv0
+                0x00000000000014b0                __aeabi_idiv0
  .text.__libc_init_array
-                0x00000000000014a0       0x48 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
-                0x00000000000014a0                __libc_init_array
- .text.memcpy   0x00000000000014e8       0x12 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memcpy-stub.o)
-                0x00000000000014e8                memcpy
- .text.memset   0x00000000000014fa       0x10 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
-                0x00000000000014fa                memset
+                0x00000000000014b4       0x48 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
+                0x00000000000014b4                __libc_init_array
+ .text.memcpy   0x00000000000014fc       0x12 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memcpy-stub.o)
+                0x00000000000014fc                memcpy
+ .text.memset   0x000000000000150e       0x10 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
+                0x000000000000150e                memset
  *(.glue_7t)
- .glue_7t       0x000000000000150a        0x0 linker stubs
+ .glue_7t       0x000000000000151e        0x0 linker stubs
  *(.glue_7)
- .glue_7        0x000000000000150a        0x0 linker stubs
+ .glue_7        0x000000000000151e        0x0 linker stubs
  *(.rodata .rodata* .gnu.linkonce.r.*)
  .rodata.str1.1
-                0x000000000000150a       0x1c hal/src/hal_spi_m_sync.o
+                0x000000000000151e       0x1c hal/src/hal_spi_m_sync.o
  .rodata.str1.1
-                0x0000000000001526       0x1c gfx_mono/gfx_mono_text.o
+                0x000000000000153a       0x1c gfx_mono/gfx_mono_text.o
  .rodata.str1.1
-                0x0000000000001542       0x2d main.o
+                0x0000000000001556       0x40 main.o
  .rodata.str1.1
-                0x000000000000156f       0x1b hpl/sercom/hpl_sercom.o
- *fill*         0x000000000000158a        0x2 
- .rodata        0x000000000000158c       0x29 hpl/sercom/hpl_sercom.o
- .rodata        0x00000000000015b5      0x292 gfx_mono/fonts/gfx_mono_font_basic_6x7.o
+                0x0000000000001596       0x1b hpl/sercom/hpl_sercom.o
+ *fill*         0x00000000000015b1        0x3 
+ .rodata        0x00000000000015b4       0x29 hpl/sercom/hpl_sercom.o
+ .rodata        0x00000000000015dd      0x292 gfx_mono/fonts/gfx_mono_font_basic_6x7.o
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000000001848                . = ALIGN (0x4)
- *fill*         0x0000000000001847        0x1 
+                0x0000000000001870                . = ALIGN (0x4)
+ *fill*         0x000000000000186f        0x1 
  *(.init)
- .init          0x0000000000001848        0x4 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
-                0x0000000000001848                _init
- .init          0x000000000000184c        0x8 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtn.o
-                0x0000000000001854                . = ALIGN (0x4)
-                0x0000000000001854                __preinit_array_start = .
+ .init          0x0000000000001870        0x4 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
+                0x0000000000001870                _init
+ .init          0x0000000000001874        0x8 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtn.o
+                0x000000000000187c                . = ALIGN (0x4)
+                0x000000000000187c                __preinit_array_start = .
  *(.preinit_array)
-                0x0000000000001854                __preinit_array_end = .
-                0x0000000000001854                . = ALIGN (0x4)
-                0x0000000000001854                __init_array_start = .
+                0x000000000000187c                __preinit_array_end = .
+                0x000000000000187c                . = ALIGN (0x4)
+                0x000000000000187c                __init_array_start = .
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
- .init_array    0x0000000000001854        0x4 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x0000000000001858                __init_array_end = .
-                0x0000000000001858                . = ALIGN (0x4)
+ .init_array    0x000000000000187c        0x4 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000000001880                __init_array_end = .
+                0x0000000000001880                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT_BY_NAME(.ctors.*))
  *crtend.o(.ctors)
-                0x0000000000001858                . = ALIGN (0x4)
+                0x0000000000001880                . = ALIGN (0x4)
  *(.fini)
- .fini          0x0000000000001858        0x4 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
-                0x0000000000001858                _fini
- .fini          0x000000000000185c        0x8 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtn.o
-                0x0000000000001864                . = ALIGN (0x4)
-                0x0000000000001864                __fini_array_start = .
+ .fini          0x0000000000001880        0x4 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
+                0x0000000000001880                _fini
+ .fini          0x0000000000001884        0x8 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtn.o
+                0x000000000000188c                . = ALIGN (0x4)
+                0x000000000000188c                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x0000000000001864        0x4 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+ .fini_array    0x000000000000188c        0x4 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
  *(SORT_BY_NAME(.fini_array.*))
-                0x0000000000001868                __fini_array_end = .
+                0x0000000000001890                __fini_array_end = .
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT_BY_NAME(.dtors.*))
  *crtend.o(.dtors)
-                0x0000000000001868                . = ALIGN (0x4)
-                0x0000000000001868                _efixed = .
+                0x0000000000001890                . = ALIGN (0x4)
+                0x0000000000001890                _efixed = .
                 [!provide]                        PROVIDE (__exidx_start = .)
 
-.vfp11_veneer   0x0000000000001868        0x0
- .vfp11_veneer  0x0000000000001868        0x0 linker stubs
+.vfp11_veneer   0x0000000000001890        0x0
+ .vfp11_veneer  0x0000000000001890        0x0 linker stubs
 
-.v4_bx          0x0000000000001868        0x0
- .v4_bx         0x0000000000001868        0x0 linker stubs
+.v4_bx          0x0000000000001890        0x0
+ .v4_bx         0x0000000000001890        0x0 linker stubs
 
-.iplt           0x0000000000001868        0x0
- .iplt          0x0000000000001868        0x0 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x0000000000001890        0x0
+ .iplt          0x0000000000001890        0x0 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.igot.plt       0x0000000000001868        0x0
- .igot.plt      0x0000000000001868        0x0 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.igot.plt       0x0000000000001890        0x0
+ .igot.plt      0x0000000000001890        0x0 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.eh_frame       0x0000000000001868        0x0
- .eh_frame      0x0000000000001868        0x0 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.eh_frame       0x0000000000001890        0x0
+ .eh_frame      0x0000000000001890        0x0 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.rel.dyn        0x0000000000001868        0x0
- .rel.iplt      0x0000000000001868        0x0 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x0000000000001890        0x0
+ .rel.iplt      0x0000000000001890        0x0 /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
                 [!provide]                        PROVIDE (__exidx_end = .)
-                0x0000000000001868                . = ALIGN (0x4)
-                0x0000000000001868                _etext = .
+                0x0000000000001890                . = ALIGN (0x4)
+                0x0000000000001890                _etext = .
 
-.relocate       0x0000000020000000       0x4c load address 0x0000000000001868
+.relocate       0x0000000020000000       0x4c load address 0x0000000000001890
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _srelocate = .
  *(.ramfunc .ramfunc.*)
@@ -8400,7 +8400,7 @@ LOAD /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-
                 0x000000002000004c                . = ALIGN (0x4)
                 0x000000002000004c                _erelocate = .
 
-.bss            0x000000002000004c      0x268 load address 0x00000000000018b4
+.bss            0x000000002000004c      0x268 load address 0x00000000000018dc
                 0x000000002000004c                . = ALIGN (0x4)
                 0x000000002000004c                _sbss = .
                 0x000000002000004c                _szero = .
@@ -8417,7 +8417,7 @@ LOAD /opt/homebrew/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/bin/../lib/gcc/arm-
                 0x00000000200002b4                _ebss = .
                 0x00000000200002b4                _ezero = .
 
-.stack          0x00000000200002b4     0x2004 load address 0x0000000000001b1c
+.stack          0x00000000200002b4     0x2004 load address 0x0000000000001b44
                 0x00000000200002b8                . = ALIGN (0x8)
  *fill*         0x00000000200002b4        0x4 
                 0x00000000200002b8                _sstack = .
@@ -8521,7 +8521,7 @@ LOAD linker stubs
  .comment       0x0000000000000049       0x4a atmel_start.o
  .comment       0x0000000000000049       0x4a hal/src/hal_atomic.o
 
-.debug_info     0x0000000000000000    0x233e3
+.debug_info     0x0000000000000000    0x23424
  .debug_info    0x0000000000000000      0xb23 gfx_mono/display/ug2832hsweg04/ug2832hsweg04.o
  .debug_info    0x0000000000000b23      0x8ce gfx_mono/display/framebuffer.o
  .debug_info    0x00000000000013f1      0xa53 gfx_mono/display/display_mono.o
@@ -8537,14 +8537,14 @@ LOAD linker stubs
  .debug_info    0x000000000000b929       0xd9 hal/utils/src/utils_assert.o
  .debug_info    0x000000000000ba02      0xc99 hpl/pm/hpl_pm.o
  .debug_info    0x000000000000c69b      0x4be hpl/gclk/hpl_gclk.o
- .debug_info    0x000000000000cb59     0x1135 main.o
- .debug_info    0x000000000000dc8e     0x165f gfx_mono/display_controller/ssd1306/ssd1306.o
- .debug_info    0x000000000000f2ed     0x8231 driver_init.o
- .debug_info    0x000000000001751e     0xaf27 hpl/sercom/hpl_sercom.o
- .debug_info    0x0000000000022445      0x165 gfx_mono/fonts/gfx_mono_font_basic_6x7.o
- .debug_info    0x00000000000225aa      0xbb1 gfx_mono/display_controller/display_ctrl_mono.o
- .debug_info    0x000000000002315b       0xb1 atmel_start.o
- .debug_info    0x000000000002320c      0x1d7 hal/src/hal_atomic.o
+ .debug_info    0x000000000000cb59     0x1176 main.o
+ .debug_info    0x000000000000dccf     0x165f gfx_mono/display_controller/ssd1306/ssd1306.o
+ .debug_info    0x000000000000f32e     0x8231 driver_init.o
+ .debug_info    0x000000000001755f     0xaf27 hpl/sercom/hpl_sercom.o
+ .debug_info    0x0000000000022486      0x165 gfx_mono/fonts/gfx_mono_font_basic_6x7.o
+ .debug_info    0x00000000000225eb      0xbb1 gfx_mono/display_controller/display_ctrl_mono.o
+ .debug_info    0x000000000002319c       0xb1 atmel_start.o
+ .debug_info    0x000000000002324d      0x1d7 hal/src/hal_atomic.o
 
 .debug_abbrev   0x0000000000000000     0x368a
  .debug_abbrev  0x0000000000000000      0x189 gfx_mono/display/ug2832hsweg04/ug2832hsweg04.o
@@ -8714,7 +8714,7 @@ LOAD linker stubs
  .debug_macro   0x0000000000007396      0x582 atmel_start.o
  .debug_macro   0x0000000000007918      0x434 hal/src/hal_atomic.o
 
-.debug_line     0x0000000000000000    0x13a32
+.debug_line     0x0000000000000000    0x13a3b
  .debug_line    0x0000000000000000      0x9d4 gfx_mono/display/ug2832hsweg04/ug2832hsweg04.o
  .debug_line    0x00000000000009d4      0x9b0 gfx_mono/display/framebuffer.o
  .debug_line    0x0000000000001384      0xc27 gfx_mono/display/display_mono.o
@@ -8730,16 +8730,16 @@ LOAD linker stubs
  .debug_line    0x0000000000007ee4      0x7b8 hal/utils/src/utils_assert.o
  .debug_line    0x000000000000869c      0x911 hpl/pm/hpl_pm.o
  .debug_line    0x0000000000008fad      0x87b hpl/gclk/hpl_gclk.o
- .debug_line    0x0000000000009828      0xca2 main.o
- .debug_line    0x000000000000a4ca      0xd5d gfx_mono/display_controller/ssd1306/ssd1306.o
- .debug_line    0x000000000000b227     0x102c driver_init.o
- .debug_line    0x000000000000c253     0x544e hpl/sercom/hpl_sercom.o
- .debug_line    0x00000000000116a1      0x7d5 gfx_mono/fonts/gfx_mono_font_basic_6x7.o
- .debug_line    0x0000000000011e76      0x93c gfx_mono/display_controller/display_ctrl_mono.o
- .debug_line    0x00000000000127b2      0xa5c atmel_start.o
- .debug_line    0x000000000001320e      0x824 hal/src/hal_atomic.o
+ .debug_line    0x0000000000009828      0xcab main.o
+ .debug_line    0x000000000000a4d3      0xd5d gfx_mono/display_controller/ssd1306/ssd1306.o
+ .debug_line    0x000000000000b230     0x102c driver_init.o
+ .debug_line    0x000000000000c25c     0x544e hpl/sercom/hpl_sercom.o
+ .debug_line    0x00000000000116aa      0x7d5 gfx_mono/fonts/gfx_mono_font_basic_6x7.o
+ .debug_line    0x0000000000011e7f      0x93c gfx_mono/display_controller/display_ctrl_mono.o
+ .debug_line    0x00000000000127bb      0xa5c atmel_start.o
+ .debug_line    0x0000000000013217      0x824 hal/src/hal_atomic.o
 
-.debug_str      0x0000000000000000    0x79ee5
+.debug_str      0x0000000000000000    0x79eef
  .debug_str     0x0000000000000000    0x6aad8 gfx_mono/display/ug2832hsweg04/ug2832hsweg04.o
                                       0x6afbc (size before relaxing)
  .debug_str     0x000000000006aad8       0x92 gfx_mono/display/framebuffer.o
@@ -8770,21 +8770,21 @@ LOAD linker stubs
                                       0x6abb2 (size before relaxing)
  .debug_str     0x0000000000070633      0x887 hpl/gclk/hpl_gclk.o
                                       0x6ade9 (size before relaxing)
- .debug_str     0x0000000000070eba     0x39e8 main.o
-                                      0x6f6e2 (size before relaxing)
- .debug_str     0x00000000000748a2      0x29c gfx_mono/display_controller/ssd1306/ssd1306.o
+ .debug_str     0x0000000000070eba     0x39f2 main.o
+                                      0x6f6ec (size before relaxing)
+ .debug_str     0x00000000000748ac      0x29c gfx_mono/display_controller/ssd1306/ssd1306.o
                                       0x6b158 (size before relaxing)
- .debug_str     0x0000000000074b3e      0xa9e driver_init.o
+ .debug_str     0x0000000000074b48      0xa9e driver_init.o
                                       0x6cdf9 (size before relaxing)
- .debug_str     0x00000000000755dc     0x481f hpl/sercom/hpl_sercom.o
+ .debug_str     0x00000000000755e6     0x481f hpl/sercom/hpl_sercom.o
                                       0x6ffee (size before relaxing)
- .debug_str     0x0000000000079dfb       0x3d gfx_mono/fonts/gfx_mono_font_basic_6x7.o
+ .debug_str     0x0000000000079e05       0x3d gfx_mono/fonts/gfx_mono_font_basic_6x7.o
                                       0x6aa64 (size before relaxing)
- .debug_str     0x0000000000079e38       0x39 gfx_mono/display_controller/display_ctrl_mono.o
+ .debug_str     0x0000000000079e42       0x39 gfx_mono/display_controller/display_ctrl_mono.o
                                       0x6a9df (size before relaxing)
- .debug_str     0x0000000000079e71       0x11 atmel_start.o
+ .debug_str     0x0000000000079e7b       0x11 atmel_start.o
                                       0x6b7fb (size before relaxing)
- .debug_str     0x0000000000079e82       0x63 hal/src/hal_atomic.o
+ .debug_str     0x0000000000079e8c       0x63 hal/src/hal_atomic.o
                                       0x6a508 (size before relaxing)
 
 .debug_frame    0x0000000000000000     0x1ce0
