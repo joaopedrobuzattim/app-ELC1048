@@ -62,8 +62,6 @@ int main(int argc, char *argv[])
         // Processar eventos do sistema
         otSysMainloopProcess(&mainloop);
 
-        // Aqui você pode acessar os valores de temperatura, luminosidade e orientação armazenados na variável global gSensorData
-
 
     }
 
