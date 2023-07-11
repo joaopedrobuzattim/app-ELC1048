@@ -1,1 +1,4 @@
-/build/
+/build
+/third_party/microchip/asf/
+.DS_Store
+asf-standalone-archive-3.45.0.85.zip
