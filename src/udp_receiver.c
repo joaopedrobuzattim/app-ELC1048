@@ -29,7 +29,7 @@ void handleUdpReceive(void *aContext, otMessage *aMessage, const otMessageInfo *
 
 int main(int argc, char *argv[])
 {
-    otInstance *instance = ...; // Obtenha uma instância do OpenThread
+    otInstance *instance = otInstanceInit; // Obtenha uma instância do OpenThread
     otUdpSocket socket;
     otSockAddr sockaddr;
 
