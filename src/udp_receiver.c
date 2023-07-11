@@ -1,4 +1,7 @@
 #include <openthread/udp.h>
+#include <string.h>
+#include <openthread/tasklet.h>
+#include <openthread/platform/uart.h>
 
 // Defina uma estrutura para armazenar os dados recebidos
 typedef struct
@@ -52,5 +55,6 @@ int main(int argc, char *argv[])
 
 
     }
+}
 
 
