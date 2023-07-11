@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
     memset(&sockaddr, 0, sizeof(sockaddr));
 
     // Defina o endereço e a porta do soquete
-    sockaddr.mPort = ...; // Substitua pelo número da porta que você deseja usar
+    sockaddr.mPort = 1024; // Substitua pelo número da porta que você deseja usar
 
     // Abra o soquete UDP
     otUdpOpen(instance, &socket, handleUdpReceive, NULL);
