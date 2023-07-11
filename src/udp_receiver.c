@@ -51,5 +51,6 @@ int main(int argc, char *argv[])
         // Aqui você pode acessar os valores de temperatura, luminosidade e orientação armazenados na variável global gSensorData
 
 
-//esperar feedback da equipe HAL para alteracoes
+    }
+
 
