@@ -1,9 +1,40 @@
-#include <atmel_start.h>
-#include <hal_gpio.h>
-#include <stdio.h>
-#include "gfx_mono_main.h"
-#include "gfx_mono_font_basic_6x7.h"
+/**
+ * \file
+ *
+ * \brief SAM EEPROM Emulator Service Quick Start
+ *
+ * Copyright (c) 2012-2018 Microchip Technology Inc. and its subsidiaries.
+ *
+ * \asf_license_start
+ *
+ * \page License
+ *
+ * Subject to your compliance with these terms, you may use Microchip
+ * software and any derivatives exclusively with Microchip products.
+ * It is your responsibility to comply with third party license terms applicable
+ * to your use of third party software (including open source software) that
+ * may accompany Microchip software.
+ *
+ * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES,
+ * WHETHER EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE,
+ * INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY,
+ * AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT WILL MICROCHIP BE
+ * LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
+ * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE
+ * SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS BEEN ADVISED OF THE
+ * POSSIBILITY OR THE DAMAGES ARE FORESEEABLE.  TO THE FULLEST EXTENT
+ * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY
+ * RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
+ * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ *
+ * \asf_license_stop
+ *
+ */
+/*
+ * Support and FAQ: visit <a href="https://www.microchip.com/support/">Microchip Support</a>
+ */
 #include <asf.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 void configure_eeprom(void);
@@ -57,10 +88,6 @@ static void configure_bod(void)
 	system_interrupt_enable(SYSTEM_INTERRUPT_MODULE_SYSCTRL);
 #endif
 
-
-}
-//! [setup]
-//Memory stuff
 typedef struct Node {
 	int data;
 	int index;
@@ -107,28 +134,30 @@ void clearCircularList(Node* head) {
 	} while (ptr != head);
 }
 
-//Cria três listas circulares
 void createSensorsLists(Node** list, int n) {
 	for(int i = 0; i < 3; i++) {
 		list[i] = createCircularList(n);
 	}
 }
 
+}
+//! [setup]
+
 int main(void)
 {
-	//eeprom_emulator_erase_memory();  //Serve para apagar a memória caso algo de errado
+	//eeprom_emulator_erase_memory();
 	system_init();
-	/* Initializes MCU, drivers and middleware */
-	atmel_start_init();
 
-	//! [setup_init]
+//! [setup_init]
 	configure_eeprom();
-	//! [setup_init]
+//! [setup_init]
 
-	//! [setup_bod]
+//! [setup_bod]
 	configure_bod();
-	//! [setup_bod]
+//! [setup_bod]
 
+//! [main]
+//! [read_page]
 	float temp_sensor_page[EEPROM_PAGE_SIZE];
 	float light_sensor_page[EEPROM_PAGE_SIZE];
 	float movement_sensor_page[EEPROM_PAGE_SIZE];
@@ -136,80 +165,40 @@ int main(void)
 	eeprom_emulator_read_page(0, temp_sensor_page);
 	eeprom_emulator_read_page(1, light_sensor_page);
 	eeprom_emulator_read_page(2, movement_sensor_page);
+//! [read_page]
 
-	int temp_index = 0, light_index = 0, movm_index = 0;
+//! [write_page]
+	eeprom_emulator_write_page(0, temp_sensor_page);
+	eeprom_emulator_commit_page_buffer();
+	eeprom_emulator_write_page(1, light_sensor_page);
+	eeprom_emulator_commit_page_buffer();
+	eeprom_emulator_write_page(2, movement_sensor_page);
+	eeprom_emulator_commit_page_buffer();
+//! [write_page]
 
-	int temp_sensor = 1, light_sensor = 2, movement_sensor = 3;
+	int 
+
+	int temp_sensor, light_sensor, movement_sensor;
 	Node* sensorLists[3];
-	//Cria as listas com 10 nodos cada
 	createSensorsLists(sensorLists, 10);
 	Node* currentNodes[3] = {sensorLists[0], sensorLists[1], sensorLists[2]};
-	// Display Message
-	const uint8_t msg_hello[] =       "Seja bem vindo!     ";
-	const uint8_t msg_temperatura[] = "Sensor 1!          ";
-	const uint8_t msg_luz[] =         "Sensor 2!          ";
-	const uint8_t msg_orient[] =      "Sensor 3!          ";
 
-	// Enable SPI and OLED
-	spi_m_sync_enable(&DISPLAY_SPI);
-	gfx_mono_init();
-	
-	// Draw a Rectangle
-	gfx_mono_draw_rect(&MONOCHROME_GRAPHICS_desc, 0, 0, UG2832HSWEG04_LCD_WIDTH, UG2832HSWEG04_LCD_HEIGHT, GFX_PIXEL_SET);
-	gfx_mono_text_draw_string(&MONOCHROME_TEXT_desc, msg_hello, 20, 12, &basic_6x7);	
-
-	/* Replace with your application code */
-	while(1) {
+	while(true) {
+		// Assume data is read into temp_sensor, light_sensor, and movement_sensor
 		currentNodes[0]->data = temp_sensor;
 		currentNodes[1]->data = light_sensor;
 		currentNodes[2]->data = movement_sensor;
 
+		// Move to next node in each circular list
 		currentNodes[0] = currentNodes[0]->next;
 		currentNodes[1] = currentNodes[1]->next;
 		currentNodes[2] = currentNodes[2]->next;
 
-		bool botao_1 = gpio_get_pin_level(PA22);
-		bool botao_2 = gpio_get_pin_level(PA06);
-		bool botao_3 = gpio_get_pin_level(PA07);
-		
-		if(!botao_1){
-			temp_sensor_page[temp_index] = currentNodes[0]->data;
-			currentNodes[0] = currentNodes[0]->next;
-			temp_index++;
-			if(temp_index >= 60) {temp_index = 0;}
-
-			eeprom_emulator_write_page(0, temp_sensor_page);
-			eeprom_emulator_commit_page_buffer();
-
-			sprintf(msg_temperatura, "Temp = %d graus", currentNodes[0]->data);
-			gfx_mono_text_draw_string(&MONOCHROME_TEXT_desc, "                 ", 20, 12, &basic_6x7);
-			gfx_mono_text_draw_string(&MONOCHROME_TEXT_desc, msg_temperatura, 20, 12, &basic_6x7);
-		}
-		if(!botao_2){
-			light_sensor_page[light_index] = currentNodes[1]->data;
-			currentNodes[1] = currentNodes[1]->next;
-			light_index++;
-			if(light_index >= 60) {light_index = 0;}
-
-			eeprom_emulator_write_page(1, light_sensor_page);
-			eeprom_emulator_commit_page_buffer();
-
-			sprintf(msg_luz, "Luz = %d", currentNodes[1]->data);
-			gfx_mono_text_draw_string(&MONOCHROME_TEXT_desc, "                 ", 20, 12, &basic_6x7);
-			gfx_mono_text_draw_string(&MONOCHROME_TEXT_desc, msg_luz, 20, 12, &basic_6x7);
-		}
-		if(!botao_3){
-			movement_sensor_page[movm_index] = currentNodes[2]->data;
-			currentNodes[2] = currentNodes[2]->next;
-			movm_index++;
-			if(movm_index >= 60) {movm_index = 0;}
-
-			eeprom_emulator_write_page(2, movement_sensor_page);
-			eeprom_emulator_commit_page_buffer();
-
-			sprintf(msg_orient, "Orient = %d graus", currentNodes[2]->data);
-			gfx_mono_text_draw_string(&MONOCHROME_TEXT_desc, "                 ", 20, 12, &basic_6x7);
-			gfx_mono_text_draw_string(&MONOCHROME_TEXT_desc, msg_orient, 20, 12, &basic_6x7);
-		}
+		//if aperto o bot�o do sensor:
+		//Printa currentNodes[index_da_lista_do_sensor]->data
+		//Escreve o dado na pagina na eeprom
+		//currentNodes[index_da_lista_do_sensor] = currentNodes[index_da_lista_do_sensor]->next
 	}
+	
+//! [main]
 }
