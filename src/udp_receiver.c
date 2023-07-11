@@ -2,6 +2,7 @@
 #include <string.h>
 #include <openthread/tasklet.h>
 #include <openthread/platform/uart.h>
+#include <openthread/platform/misc.h>
 
 // Defina uma estrutura para armazenar os dados recebidos
 typedef struct
@@ -29,9 +30,10 @@ void handleUdpReceive(void *aContext, otMessage *aMessage, const otMessageInfo *
 
 int main(int argc, char *argv[])
 {
-    otInstance *instance = otInstanceInit; // Obtenha uma instância do OpenThread
+    otInstance *instance = otInstanceInitSingle(); // Obtenha uma instância do OpenThread
     otUdpSocket socket;
     otSockAddr sockaddr;
+    otSysMainloopContext mainloop;
 
     // Inicialize o soquete UDP
     memset(&socket, 0, sizeof(socket));
@@ -47,14 +49,26 @@ int main(int argc, char *argv[])
     // O loop principal do programa
     while (true)
     {
+        // Atualize o contexto do loop principal
+        otSysMainloopUpdate(instance, &mainloop);
+
+        // Aguarde eventos
+        otSysMainloopPoll(&mainloop);
+
         // Execute o processamento de eventos do OpenThread
         otTaskletsProcess(instance);
         otSysProcessDrivers(instance);
+
+        // Processar eventos do sistema
+        otSysMainloopProcess(&mainloop);
 
         // Aqui você pode acessar os valores de temperatura, luminosidade e orientação armazenados na variável global gSensorData
 
 
     }
+
+    return 0;
 }
+
 
 
