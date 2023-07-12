@@ -140,6 +140,7 @@ int main(void)
 	int temp_index = 0, light_index = 0, movm_index = 0;
 
 	int temp_sensor = 1, light_sensor = 2, movement_sensor = 3;
+	int tempnum = 0, lightnum = 0, movmnum = 0;
 	Node* sensorLists[3];
 	//Cria as listas com 10 nodos cada
 	createSensorsLists(sensorLists, 10);
@@ -163,6 +164,13 @@ int main(void)
 		currentNodes[0]->data = temp_sensor;
 		currentNodes[1]->data = light_sensor;
 		currentNodes[2]->data = movement_sensor;
+		tempnum++;
+		lightnum++;
+		movmnum++;
+
+		currentNodes[0]->index = tempnum;
+		currentNodes[1]->index = lightnum;
+		currentNodes[2]->index = movmnum;
 
 		currentNodes[0] = currentNodes[0]->next;
 		currentNodes[1] = currentNodes[1]->next;
