@@ -62,7 +62,7 @@ static void configure_bod(void)
 //! [setup]
 //Memory stuff
 typedef struct Node {
-	int data;
+	uint8_t data;
 	int index;
 	struct Node* next;
 } Node;
@@ -129,9 +129,9 @@ int main(void)
 	configure_bod();
 	//! [setup_bod]
 
-	float temp_sensor_page[EEPROM_PAGE_SIZE];
-	float light_sensor_page[EEPROM_PAGE_SIZE];
-	float movement_sensor_page[EEPROM_PAGE_SIZE];
+	uint8_t temp_sensor_page[EEPROM_PAGE_SIZE];
+	uint8_t light_sensor_page[EEPROM_PAGE_SIZE];
+	uint8_t movement_sensor_page[EEPROM_PAGE_SIZE];
 	
 	eeprom_emulator_read_page(0, temp_sensor_page);
 	eeprom_emulator_read_page(1, light_sensor_page);
